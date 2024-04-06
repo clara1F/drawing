@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html Lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="./style.css"/>
+        <title>Canvas</title>
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <div class="container">
+            
+            <section class="drawing-canvas">
+             <canvas></canvas>
+            </section>
+            <section class="tool-bar">
+                <div class="row colours">
+                    <label class="title">COLOURS</label>
+                    <ul class="options">
+                        <li class="option selected">
+                            <input type="color" id="colour-picker" value="black">
+                          </li>
+                        <li class="option">                                   
+                          </li>
+                        <li class="option">                                  
+                          </li>
+                        <li class="option">  
+                          </li>
+                        <li class="option">
+                         </li>
+                        <li class="option">
+                         </li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <label class="title">BRUSHES</label>
+                    <ul class="options">
+                        <li class="option active tool" id="round-brush">
+                            <img src="icons/brush.svg"  alt="">
+                            <span>round brush</span>
+                        </li>
+
+                        <li class="option tool" id="square-brush">
+                            <img src="icons/squarebrush.png"  alt="">
+                            <span>square brush</span>
+                        </li>
+                        
+                        <li class="option tool" id="flat-brush">
+                            <img src="icons/flatbrush.png"  alt="">
+                            <span>flat brush</span>
+                        </li>
+                        
+                        <li class="option tool" id="eraser">
+                            <img src="icons/eraser.svg" alt="">
+                            <span>eraser</span>
+                        </li>
+
+                        <li class="option tool" id="line">
+                            <img src="icons/line.png" alt="">
+                            <span>line</span>
+                        </li>
+                        
+                        <ul>‎ </ul>
+                        <li class="option tool" id="add-text">
+                            <img src="icons/textsymbol.png" alt="">
+                            
+                            <li>
+                            <div class="size-option">
+                            <label for="size-slider">line width:</label>
+                            <input type="range" id="size-slider" min="1" max="80" value="5">
+                            </div>
+                                </li>
+                            
+                            <div class="text-options">
+                                <ul>
+                                    <label for="text-size-input">text size:</label>
+                                    <input type="number" id="text-size-input" value="20">
+                                </ul>
+                                <ul>
+                                    <label for="text-colour-input">text colour:</label>
+                                    <input type="color" id="text-colour-input" value="#000000">
+                                </ul>
+                                <ul> 
+                                    <label for="font-selector">font:</label>
+                                        <select id="font-selector">
+                                        <option value="Arial">Arial</option>
+                                        <option value="Times New Roman">Times New Roman</option>
+                                        <option value="Courier New">Courier New</option>
+                                        <option value="Arial">Arial</option>
+                                        <option value="Calibri">Calibri</option>
+                                        <option value="Garamond">Garamond</option>
+                                        <option value="Roboto">Roboto</option>
+                                        <option value="Comic Sans MS">Comic Sans MS</option>
+                                        <option value="Tahoma">Tahoma</option>
+                                        <option value="Palatino">Palatino</option>
+                                        </select>
+                                </ul>
+                            
+                            </div>
+                        </li>
+                        <ul>‎ </ul>
+                        <div class="row">
+                            <label class="title">SHAPES</label>
+                            <ul class="options">
+                                <li class="options">
+                                    <input type="checkbox" id="fill-colour">
+                                    <label for="fill-colour">fill colour</label>
+                                </li>
+                                <li class="option tool" id="triangle">
+                                    <img src="icons/triangle.svg" alt="">
+                                    <span>triangle</span>
+                                </li>
+                                <li class="option tool" id="circle">
+                                    <img src="icons/circle.svg" alt="">
+                                    <span>circle</span>
+                                </li>
+                                <li class="option tool " id="rectangle">
+                                    <img src="icons/rectangle.svg" alt="">
+                                    <span>rectangle</span>
+                                </li>
+                                <li class="option tool" id="hexagon">
+                                    <img src="icons/hexagonn.png" alt="">
+                                    <span>hexagon</span>
+                                </li>
+                             
+                            </ul>
+                        </div>
+                       
+                        </ul>
+                 </div>
+                       
+                      <div class="row buttons">
+                        <button class="save-image"><img src="icons/save.png">  ‎ ‎ ‎ ‎ ‎  DOWNLOAD 
+                        </button>
+                        <button class="clear-canvas"> ‎ ‎ ‎ ‎ ‎  <img src="icons/delete.png"> ‎ ‎ ‎ ‎ CLEAR CANVAS 
+                        </button>
+                  </div>
+            </section>
+        </div>
+ </body>
+</html>

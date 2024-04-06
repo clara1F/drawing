@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(0, 0, 0);
+ }
+
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: rgb(90, 90, 90);
+}
+.container{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    padding: auto;
+    max-width: 1700px;
+}
+
+section{
+    background-color: rgb(219, 219, 219);
+    border-radius: 7px;
+}
+.tool-bar{
+    width: 250px;
+    padding: 15px 22px 0;
+}
+.tool-bar .row{
+    margin-bottom: 20px;
+}
+.row .options{
+    list-style: none;
+    margin: 10px 0 0 5px;
+}
+.row .options .option{
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.colours .option:nth-child(1){
+    background-color: black;
+}
+.colours .option:nth-child(2){
+    background-color: red;
+}.colours .option:nth-child(3){
+    background-color: orange;
+}.colours .option:nth-child(4){
+    background-color: yellow;
+}.colours .option:nth-child(5){
+    background-color: green;
+}.colours .option:nth-child(6){
+    background-color: blue;
+}
+
+.option #colour-picker{
+    opacity: 0;
+    cursor: pointer;
+}
+
+.option:is(:hover, .active) img{
+ filter: invert(70%) sepia(40%) saturate(3000%) hue-rotate(230deg) brightness(100%) contrast(100%); 
+}
+
+.option :where(span, label){
+    color:#000000;
+    cursor: pointer;
+    padding-left: 10px;
+}
+
+.option:is(:hover, .active) :where(span, label){
+    color:blueviolet;
+}
+
+.row #fill-colour{
+height:18px;
+width: 18px;
+cursor: pointer;
+}
+
+#fill-colour:checked ~ label{
+    color:blueviolet;
+}
+
+.option #slide-slider{
+    width: 100%;
+    height: 5px;
+    margin-top: 10px;
+}
+
+.colours .options{
+    display: flex;
+    justify-content: space-between;
+}
+
+.colours .option{
+    height: 22px;
+    width: 22px;
+    margin-top: 3px;
+    position: relative;
+}
+
+.colours .option {
+    height: 22px;
+    width: 22px;
+    margin-top: 3px;
+    position: relative;
+    border-radius: 50%; 
+}
+
+
+.text-options #text-size-input{
+    width: 50px ;
+    margin-left: 20px;
+    margin-right: 20px
+    
+}
+
+.text-options #text-colour-input{
+    cursor: pointer;
+  
+}
+
+.text-options #font-selector{
+    margin-top: 1px;
+    width: 100px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+
+.buttons button{
+    width: 100%;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 11px 0;
+    font-size: 0.9rem;
+    margin-bottom: 13px;
+    background: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.buttons .clear-canvas{
+    background: rgb(110, 110, 110);
+}
+
+.clear-canvas:hover{
+ color:rgba(78, 0, 0, 0.356);
+ background: rgba(255, 0, 0, 0.384);
+ transition: all 0.4s ease;
+}
+
+
+.buttons .save-image{
+    background: rgb(110, 110, 110);
+}
+
+.save-image:hover{
+    color:rgba(4, 0, 66, 0.356);
+    background: rgba(139, 132, 230, 0.384);
+    transition: all 0.4s ease;
+}
+   
+.drawing-canvas{
+    flex: 1;
+}
+.drawing-canvas canvas{
+    width: 100%;
+    height: 100%;
+}
